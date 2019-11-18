@@ -165,6 +165,9 @@ RSpec.configure do |config|
   config.order = 'random'
   config.infer_spec_type_from_file_location!
 
+  config.filter_run focus: true
+  config.run_all_when_everything_filtered = true
+
   # If you're not using ActiveRecord, or you'd prefer not to run each of your
   # examples within a transaction, remove the following line or assign false
   # instead of true.

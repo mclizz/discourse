@@ -70,7 +70,10 @@ export default DiscourseRoute.extend({
 
   afterModel(tag, transition) {
     const controller = this.controllerFor("tags.show");
-    controller.set("loading", true);
+    controller.setProperties({
+      loading: true,
+      showInfo: false
+    });
 
     const params = filterQueryParams(transition.to.queryParams, {});
     const categorySlug = this.categorySlug;
